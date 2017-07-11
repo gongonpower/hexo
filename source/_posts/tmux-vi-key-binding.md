@@ -6,6 +6,8 @@ tags:
 ## Add vi key binding to .tmux.conf
 File: ~/.tmux.conf
 ```
+unbind C-b
+set -g prefix C-j
 set-window-option -g mode-keys vi
 bind h select-pane -L
 bind j select-pane -D
@@ -13,6 +15,9 @@ bind k select-pane -U
 bind l select-pane -R
 bind-key -t vi-copy 'v' begin-selection
 bind-key -t vi-copy 'y' copy-selection
+set-window-option -g automatic-rename off
+set-option -g allow-rename off
+
 ```
 reload the conf file while in tmux:
 ```
@@ -40,5 +45,9 @@ y
 Press first time to zoom and press again to restore
 ```
 <c-b> z
+```
+## Rename window key
+```
+<c-b> ,
 ```
 
