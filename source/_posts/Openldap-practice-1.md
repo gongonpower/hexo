@@ -15,6 +15,7 @@ slappasswd
 # Modify rootdn
 create-rootdn.ldif
 ```
+dn: olcDatabase={2}bdb,cn=config
 changeType: modify
 replace: olcSuffix
 olcSuffix: dc=olimpus,dc=com
